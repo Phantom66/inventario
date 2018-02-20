@@ -8,7 +8,7 @@ class Persona extends Model
 {
     //
 
-    protected $table = 'personans';
+    protected $table = 'personas';
 
 
     protected $fillable = [
