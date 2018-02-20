@@ -38,6 +38,12 @@
 		        	{{$bienNacional->bienUser->name}} 
 		     </td>
 		    </tr>
+		    <tr>
+		    	<th scope="col">Unidad de donde</th>
+		        <td>
+		        	{{$bienNacional->bienUser->name}} 
+		     </td>
+		    </tr>
 		  </thead>
 
 	<table class="table">
