@@ -33,7 +33,7 @@
 		      	Serial: {{$articulo->serial}}</td>
 		      <td>{{$articulo->fec_adquisicion}}</td>
 		      <td>
-		    	<a href="#">Editar</a>
+		    	<a href="{{route ('inventario_create_path')}}">Editar</a>
 		      </td>
 		       <td>
 		    	<a href="#">Actualizar</a>

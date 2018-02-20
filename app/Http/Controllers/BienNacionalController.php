@@ -33,6 +33,8 @@ class BienNacionalController extends Controller
     public function create()
     {
         //
+
+        return view('inventario.create');
     }
 
     /**
