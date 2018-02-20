@@ -26,4 +26,10 @@ class BienNacional extends Model
     }
 
 
+     public function bienEstatus()
+    {
+        return $this->belongsTo('App\Estatus', 'estatus_bien_id', 'id');
+    }
+
+
 }

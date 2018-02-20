@@ -19,12 +19,24 @@
 		      </td>
 		    </tr>
 		    <tr>
+		    	<th scope="col">Estado del Equipo</th>
+		    	<td>{{$bienNacional->bienEstatus->descripcion}}</td>
+		    </tr>
+		    <tr>
 		    	<th scope="col">Fecha de Adquisición</th>
 		        <td>{{$bienNacional->fec_adquisicion}}</td>
 		    </tr>
 			<tr>
-		    	<th scope="col">Persona Responsable de la Entrega:</th>
-		        <td>{{$bienNacional->bienPersona->nombre}}</td>
+		    	<th scope="col">Persona Responsable de la Entrega</th>
+		        <td>
+		        	{{$bienNacional->bienPersona->nombre}} {{$bienNacional->bienPersona->apellido}}
+		        </td>
+		    </tr>
+		    <tr>
+		    	<th scope="col">Persona Responsable Quien Recibe</th>
+		        <td>
+		        	{{$bienNacional->bienUser->name}} 
+		     </td>
 		    </tr>
 		  </thead>
 

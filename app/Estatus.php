@@ -13,7 +13,13 @@ class Estatus extends Model
 
     protected $fillable = [
 
-    	'descripcion'
+    	'descripcion',
 
     ];
+
+      public function bienPersona()
+    {
+        return $this->hasMany('App\BienNacional');
+    }
+
 }
