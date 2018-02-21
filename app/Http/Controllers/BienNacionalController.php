@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\BienNacional;
+
 use Illuminate\Http\Request;
 
 
@@ -18,7 +19,7 @@ class BienNacionalController extends Controller
     {
         //
 
-       $bienes = BienNacional::all();
+       $bienes = BienNacional::orderBy('id','DESC')->paginate(10);
 
 
         return view('inventario.index', compact('bienes'));
@@ -46,8 +47,9 @@ class BienNacionalController extends Controller
     public function store(Request $request)
     {
         //
+        $bien = new BienNacional();
 
-        dd($request);
+        return 'Hola';
     }
 
     /**
@@ -56,16 +58,11 @@ class BienNacionalController extends Controller
      * @param  \App\BienNacional  $bienNacional
      * @return \Illuminate\Http\Response
      */
-    public function show(BienNacional $bienNacional)
+    public function show(BienNacional $bien)
     {
         //
 
-        $bienNacional = BienNacional::find(1);
-    
-
-        //return view('inventario.show', compact('bienNacional'));
-
-        return view('inventario.show', compact('bienNacional'));
+         return view('inventario.show')->with('bienNacional', $bien);
     }
 
     /**

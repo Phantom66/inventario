@@ -2,16 +2,13 @@
 
 @section('content')
 
-	Trabajando con Inventartrio
-
-	<form class="" action="#">
+	<form class="" action="{{ route('store_inventario_path')}}">
 
 	<div class="form-group">
 
 		{{ csrf_field() }}
-		<hr>
 		  	<div class="form-control-static">
-				Datos de la Persona	  		
+				<p><b>Datos de la Persona</b></p>	  		
 	  		</div>
 	  </div>
 	  <div class="form-group">
@@ -39,7 +36,7 @@
 	  <div class="form-group">
 	  	<hr>
 	  	<div class="form-control-static">
-			<br>Descripción de la Unidad Inventariada	  		
+			<br><p><b>Descripción de la Unidad Inventariada</b></p>	  		
 	  	</div>
 	  </div>
 
@@ -67,7 +64,7 @@
 	  <div class="form-group">
 	  	<hr>
 	  	<div class="form-control-static">
-			<br>Específicaicones del Equipo	  		
+			<br><p><b>Específicaicones del Equipo</b></p>	  		
 	  	</div>
 	  </div>
 
