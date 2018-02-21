@@ -2,13 +2,11 @@
 
 @section('content')
 
-	<form class="" action="{{ route('store_inventario_path')}}">
+	<form class="" action="#">
 
 	<div class="form-group">
-
-		{{ csrf_field() }}
 		  	<div class="form-control-static">
-				<p><b>Datos de la Persona</b></p>	  		
+				<strong>Datos de la Persona</strong>	  		
 	  		</div>
 	  </div>
 	  <div class="form-group">

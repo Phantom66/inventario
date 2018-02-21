@@ -3,13 +3,16 @@
 @section('content')
 	
 	<div class="col-sm-10">
+
+	<div class="form-group">
+
+		<div class="form-control-static">
+			<h2>Listado</h2>  <a href="{{ route('inventario_create_path')}}" class="btn btn-default pull-right">Crear</a>	
+	  	</div>
+	  </div>
 	
-	<h2>Listado</h2>
-			@foreach($bienes as $articulo)
 
-			     <p > <b>Usuario:</b> {{ $articulo->bienUser->name }}</p>	
-
-
+			
 				<table class="table">
 				  <thead class="thead-light">
 				    <tr>
@@ -20,10 +23,10 @@
 				      <th></th><th></th><th></th>
 				    </tr>
 				  </thead>
+				  @foreach($bienes as $articulo)
 				  <tbody>
 				    <tr>
 				      <th scope="row">
-				      	<a href="{{ route('inventario_path', ['bien' => $articulo->id])}}" >
 				      		{{$articulo->id}}
 				      	</a>
 				      </th>
@@ -34,7 +37,7 @@
 				      	Serial: {{$articulo->serial}}</td>
 				      <td>{{$articulo->fec_adquisicion}}</td>
 				      <td>
-				    	<a href="{{route ('inventario_create_path')}}" class="btn btn-primary">Editar</a>
+				    	<a href="{{ route('inventario_path', $articulo->id)}} >" class="btn btn-primary">&nbsp&nbspVer&nbsp&nbsp&nbsp&nbsp&nbsp</a>
 				      </td>
 				       <td>
 				    	<a href="#" class="btn btn-primary" >Actualizar</a>

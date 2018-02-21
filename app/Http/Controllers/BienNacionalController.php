@@ -21,9 +21,7 @@ class BienNacionalController extends Controller
 
        $bienes = BienNacional::orderBy('id','DESC')->paginate(10);
 
-
         return view('inventario.index', compact('bienes'));
-        //dd($bienes);
     }
 
     /**
