@@ -4,73 +4,141 @@
 
 	Trabajando con Inventartrio
 
-	<form class="form-inline" action="#">
+	<form class="" action="#">
 
-	<hr>
-	  <div class="form-group">
-	    <label for="nombre">Nombres: </label>
-	    <input type="nombre" class="form-control" id="nombre">
+	<div class="form-group">
+
+		{{ csrf_field() }}
+		<hr>
+		  	<div class="form-control-static">
+				Datos de la Persona	  		
+	  		</div>
 	  </div>
 	  <div class="form-group">
-	    <label for="apellido">Apellidos:</label>
-	    <input type="text" class="form-control" id="apellido">
-	  </div>
+	    <label for="nombre" class="control-label col-md-1">Nombres: </label>
+	    <div class="col-md-3">  
+	    	<input type="nombre" class="form-control" id="nombre">	
+	    </div>
+	   </div>
+
 	  <div class="form-group">
-	    <label for="fec_egreso">Fecha de Ingreso:</label>
-	    <input type="date" class="form-control" id="fec_egreso">
-	  </div>
-	  <br><hr><b>Datos de la Unidad</b> <br>	
-	  <div class="form-group">
-	    <label for="nombre_unidad">Unidad:</label>
-	    <input type="text" class="form-control" id="nombre_unidad">
-	  </div>
-	  <div class="form-group">
-	    <label for="cod_ubi_admin">Codigo de Ubicacion Administrativa:</label>
-	    <input type="text" class="form-control" id="cod_ubi_admin">
-	  </div>
-	  <div class="form-group">
-	    <label for="ubi_geo">Ubicación Geográfica:</label>
-	    <input type="text" class="form-control" id="ubi_geo">
-	  </div>
-	  <br><hr><b>Específicaciones del Equipo</b><br>
-	  <div class="form-group">
-	    <label for="nombre_equipo">Nombre del Equipo:</label>
-	    <input type="text" class="form-control" id="nombre_equipo">
-	  </div>
-	  <div class="form-group">
-	    <label for="marca">Marca:</label>
-	    <input type="text" class="form-control" id="marca">
-	  </div>
-	  <div class="form-group">
-	    <label for="Modelo">Modelo:</label>
-	    <input type="text" class="form-control" id="Modelo">
-	  </div>
-	  <br><br>
-	  <div class="form-group">
-	    <label for="color">Color:</label>
-	    <input type="text" class="form-control" id="color">
-	  </div>
-	  <div class="form-group">
-	    <label for="serial">Serial:</label>
-	    <input type="text" class="form-control" id="serial">
-	  </div>
-	  <div class="form-group">
-	    <label for="fec_adquisicion">Fecha de Adquisición:</label>
-	    <input type="date" class="form-control" id="fec_adquisicion">
-	  </div>
-	  <div class="form-group">
-	    <label for="valor">Valor:</label>
-	    <input type="text" class="form-control" id="valor">
+	    <label for="apellido" class="control-label col-md-1">Apellidos:</label>
+	    <div class="col-md-3">
+	    	<input type="text" class="form-control" id="apellido">
+	    </div>
+
 	  </div>
 
 	  <div class="form-group">
-	    <div class="col-lg-offset-2 col-lg-10">
-	      <button type="submit" class="btn btn-default">Entrar</button>
+	    <label for="fec_egreso" class="control-label col-md-1">Fecha de Ingreso:</label>
+	    <div class="col-md-3">
+	    	<input type="date" class="form-control" id="fec_egreso">
 	    </div>
 	  </div>
 
-	  <br>
-	  <br>
-	  <button type="submit" class="btn btn-default">Submit</button>
+	  <div class="form-group">
+	  	<hr>
+	  	<div class="form-control-static">
+			<br>Descripción de la Unidad Inventariada	  		
+	  	</div>
+	  </div>
+
+	  <div class="form-group">
+	    <label for="nombre_unidad" class="control-label col-md-1">Unidad:</label>
+	    <div class="col-md-3">
+	    	 <input type="text" class="form-control" id="nombre_unidad">
+	    </div>
+	  </div>
+
+	  <div class="form-group">
+	    <label for="cod_ubi_admin" class="control-label col-md-1">Cod.Ubi.Admin.:</label>
+	    <div class="col-md-3">
+	    	<input type="text" class="form-control" id="cod_ubi_admin">
+	    </div>
+	  </div>
+
+	  <div class="form-group">
+	    <label for="ubi_geo" class="control-label col-md-1">Ubicación Geográfica:</label>
+	    <div class="col-md-3">
+	    	<input type="text" class="form-control" id="ubi_geo">
+	    </div>
+	  </div>
+
+	  <div class="form-group">
+	  	<hr>
+	  	<div class="form-control-static">
+			<br>Específicaicones del Equipo	  		
+	  	</div>
+	  </div>
+
+	  <div class="form-group">
+	    <label for="nombre_equipo" class="control-label col-md-2">Nombre del Equipo:</label>
+	    <div class="col-md-3">
+	    	<input type="text" class="form-control" id="nombre_equipo">
+	    </div>
+	  </div>
+
+	  <div class="form-group">
+	    <label for="marca" class="control-label col-md-1">Marca:</label>
+	    <div class="col-md-2">
+	    	<input type="text" class="form-control" id="marca">
+	    </div>
+	  </div>
+
+	  <div class="form-group">
+	    <label for="Modelo" class="control-label col-md-1">Modelo:</label>
+	    <div class="col-md-2">
+	    	<input type="text" class="form-control" id="Modelo">
+	    </div>
+	  </div>
+
+	  <div class="form-group">
+	  	<hr>
+	  	<div class="form-control-static">
+			<br>		
+	  	</div>
+	  </div>
+
+	  <div class="form-group">
+	    <label for="color" class="control-label col-md-2">Color:</label>
+	    <div class="col-md-3">
+	    	<input type="text" class="form-control" id="color">
+	    </div>
+	  </div>
+
+	  <div class="form-group">
+	    <label for="serial" class="control-label col-md-1">Serial:</label>
+	    <div class="col-md-3">
+	    	<input type="text" class="form-control" id="serial">
+	  </div>
+
+	  </div>
+	  	  <div class="form-group">
+	  	<hr>
+	  	<div class="form-control-static">
+			<br>		
+	  	</div>
+	  </div>
+
+	  <div class="form-group">
+	    <label for="fec_adquisicion" class="control-label col-md-2">Fecha de Adquisición:</label>
+	    <div class="col-md-3">
+	    	<input type="date" class="form-control" id="fec_adquisicion">
+	    </div>
+	    
+	  </div>
+
+	  <div class="form-group">
+	    <label for="valor" class="control-label col-md-1">Valor:</label>
+	    <div class="col-md-3">
+	    	<input type="text" class="form-control" id="valor">
+	    </div>  
+	  </div>
+
+	  <div class="form-group">
+	  	<div class="col-md-2">
+	  		<button type="submit" class="btn btn-primary">Enviar</button>
+	  	</div>
+	  </div>	  
 	</form>
 @endsection()
