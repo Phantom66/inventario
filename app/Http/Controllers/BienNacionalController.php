@@ -47,7 +47,7 @@ class BienNacionalController extends Controller
         //
         $bien = new BienNacional();
 
-        return 'Hola';
+        return dd($request);
     }
 
     /**
@@ -92,8 +92,15 @@ class BienNacionalController extends Controller
      * @param  \App\BienNacional  $bienNacional
      * @return \Illuminate\Http\Response
      */
-    public function destroy(BienNacional $bienNacional)
+    public function destroy($bien)
     {
         //
+
+        $bienNacional = BienNacional::find($bien);
+
+       $bienNacional->delete();
+
+        return back()->with('info', 'Este item fue desincorporado.');
+
     }
 }

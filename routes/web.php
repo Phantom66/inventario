@@ -10,6 +10,8 @@ Route::post('inventario/store', 'BienNacionalController@store')->name('inventari
 
 Route::get('inventario/{bien}', 'BienNacionalController@show')->name('inventario_path');
 
+Route::delete('inventario/{bien}', 'BienNacionalController@destroy')->name('inventario_delete_path');
+
 
 Auth::routes();
 

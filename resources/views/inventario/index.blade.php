@@ -9,10 +9,7 @@
 		<div class="form-control-static">
 			<h2>Listado</h2>  <a href="{{ route('inventario_create_path')}}" class="btn btn-default pull-right">Crear</a>	
 	  	</div>
-	  </div>
-	
-
-			
+	  </div>	
 				<table class="table">
 				  <thead class="thead-light">
 				    <tr>
@@ -43,7 +40,11 @@
 				    	<a href="#" class="btn btn-primary" >Actualizar</a>
 				      </td>
 				      <td>
-				    	<a href="#" class="btn btn-primary">Desincorporar</a>
+				      	<form action="{{ route('inventario_delete_path', $articulo->id) }}" method="POST">
+				      	{{ csrf_field() }}
+				      		<input type="hidden" name="_method" value="DELETE">
+				      		<button class="btn btn-link">Desincorporar</button>
+				      	</form>
 				      </td>
 				    </tr>
 			@endforeach

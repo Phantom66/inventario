@@ -2,8 +2,9 @@
 
 @section('content')
 
-	<form class="" action="#">
+	<form class="" action="{{route('inventario_store_path') }}" method="POST">
 
+		 {{ csrf_field() }}
 	<div class="form-group">
 		  	<div class="form-control-static">
 				<strong>Datos de la Persona</strong>	  		
