@@ -58,7 +58,7 @@ class BienNacionalController extends Controller
 
         $persona->fill(
 
-            $request->only('nombre', 'apellido', 'fec_egreso')
+            $request->only('n_persona', 'apellido', 'fec_egreso')
 
         );
 
@@ -66,7 +66,7 @@ class BienNacionalController extends Controller
 
         $unidad->fill(
 
-            $request->only('nom_unidad', 'cod_ubi_admin', 'ubi_geo')
+            $request->only('n_unidad', 'cod_ubi_admin', 'ubi_geo')
 
         );
 
@@ -81,7 +81,7 @@ class BienNacionalController extends Controller
 
         $bien->fill(
 
-            $request->only('cod_bien', 'nombre', 'marca', 'modelo', 'color', 
+            $request->only('cod_bien', 'n_bien', 'marca', 'modelo', 'color', 
                            'serial', 'fec_adquisicion', 'valor')
         );
         $bien->unidad_id = $unidad->id;
