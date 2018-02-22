@@ -17,7 +17,7 @@ class CreateBienNacionalsTable extends Migration
         Schema::create('bien_nacionals', function (Blueprint $table) {
             $table->increments('id');
             $table->string('cod_bien');
-            $table->string('nombre',45);
+            $table->string('n_bien',45);
             $table->string('marca',45)->nullable();
             $table->string('modelo',45)->nullable();
             $table->string('color',45)->nullable();
