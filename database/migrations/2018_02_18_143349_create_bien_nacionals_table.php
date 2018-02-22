@@ -18,12 +18,12 @@ class CreateBienNacionalsTable extends Migration
             $table->increments('id');
             $table->string('cod_bien');
             $table->string('nombre',45);
-            $table->string('marca',45);
-            $table->string('modelo',45);
-            $table->string('color',45);
+            $table->string('marca',45)->nullable();
+            $table->string('modelo',45)->nullable();
+            $table->string('color',45)->nullable();
             $table->string('serial',45);
             $table->date('fec_adquisicion');
-            $table->string('valor',45);
+            $table->string('valor',45)->nullable();
             $table->integer('unidad_id')->unsigned();
             $table->integer('persona_id')->unsigned();
             $table->integer('estatus_bien_id')->unsigned();

@@ -17,9 +17,9 @@ class CreateUnidadsTable extends Migration
 
         Schema::create('unidads', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('nom_unidad');
-            $table->string('cod_ubi_admin');
-            $table->string('ubi_geo');
+            $table->string('n_unidad');
+            $table->string('cod_ubi_admin')->nullable();
+            $table->string('ubi_geo')->nullable();
             $table->timestamps();
         });
     }
