@@ -7,13 +7,13 @@
 		 {{ csrf_field() }}
 	<div class="form-group">
 		  	<div class="form-control-static">
-				<strong>Datos de la Persona</strong>	  		
+				<strong>Datos de la Persona que Entrega</strong>	  		
 	  		</div>
 	  </div>
 	  <div class="form-group">
 	    <label for="nombre" class="control-label col-md-1">Nombres: </label>
 	    <div class="col-md-3">  
-	    	<input type="nombre" name="nombre" class="form-control" id="nombre">	
+	    	<input type="nombre" name="n_persona" class="form-control" id="nombre">	
 	    </div>
 	   </div>
 
@@ -42,7 +42,7 @@
 	  <div class="form-group">
 	    <label for="nombre_unidad" class="control-label col-md-1">Unidad:</label>
 	    <div class="col-md-3">
-	    	 <input type="text" name="nom_unidad" class="form-control" id="nombre_unidad">
+	    	 <input type="text" name="n_unidad" class="form-control" id="nombre_unidad">
 	    </div>
 	  </div>
 
@@ -70,7 +70,7 @@
 	  <div class="form-group">
 	    <label for="nombre_equipo" class="control-label col-md-2">Nombre del Equipo:</label>
 	    <div class="col-md-3">
-	    	<input type="text" name="nombre_equipo" class="form-control" id="nombre_equipo">
+	    	<input type="text" name="n_bien" class="form-control" id="nombre_equipo">
 	    </div>
 	  </div>
 
