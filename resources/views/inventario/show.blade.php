@@ -7,7 +7,7 @@
 		<table class="table">
 			    <tr>
 			      <th scope="col">Unidad Inventariada</th>
-			    	 <td>{{$bienNacional->nombre}}</td>
+			    	 <td>{{$bienNacional->bienUnidad->n_unidad}}</td>
 			    </tr>
 			    <tr>
 			    	<th scope="col">Especificaiones del Equipo</th>
@@ -28,7 +28,7 @@
 				<tr>
 			    	<th scope="col">Persona Responsable de la Entrega</th>
 			        <td>
-			        	{{$bienNacional->bienPersona->nombre}} {{$bienNacional->bienPersona->apellido}}
+			        	{{$bienNacional->bienPersona->n_persona}} {{$bienNacional->bienPersona->apellido}}
 			        </td>
 			    </tr>
 			    <tr>
