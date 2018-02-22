@@ -30,16 +30,11 @@ class BienNacionalRequest extends FormRequest
         'n_bien' => 'required', 
         'serial' => 'required',
         'fec_adquisicion' => 'required',
-
         'descripcion'=>'required',
-
-        'n_persona' => 'requied',
-        'apellido' 'requied',
-        'fec_egreso' => 'requied',
-        
-        'n_unidad'=>'requied'
-
-
-    ];
+        'n_persona' => 'required',
+        'apellido' =>'required',
+        'fec_egreso' => 'required',  
+        'n_unidad'=>'required'
+        ];
     }
 }
