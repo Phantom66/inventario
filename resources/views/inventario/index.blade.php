@@ -2,7 +2,8 @@
 
 @section('content')
 	
-	<div class="col-sm-10">
+	<div class="col-sm-8">
+		<hr>
 
 	<div class="form-group">
 
@@ -10,7 +11,8 @@
 			<h2>Listado</h2>  <a href="{{ route('inventario_create_path')}}" class="btn btn-default pull-right">Crear</a>	
 	  	</div>
 	  </div>	
-				<table class="table">
+	  	@include('frament._info')
+				<table class="table table-hover table-striped">
 				  <thead class="thead-light">
 				    <tr>
 				      <th scope="col">#</th>
@@ -53,6 +55,10 @@
 	</div>
 
 		{!! $bienes->render() !!}
+	<div class="col-sm-4" >
+		<hr>
+		@include('frament._aside')
+	</div>
 
 	
 
