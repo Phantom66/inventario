@@ -62,25 +62,35 @@ class BienNacionalController extends Controller
 
         );
 
+        $persona->save();
+
         $unidad->fill(
 
             $request->only('nom_unidad', 'cod_ubi_admin', 'ubi_geo')
 
         );
 
+        $unidad->save();
+
         $estatus->fill(
 
             $request->only('descripcion')
         );
 
+        //$estatus->save();
+
         $bien->fill(
 
             $request->only('cod_bien', 'nombre', 'marca', 'modelo', 'color', 
                            'serial', 'fec_adquisicion', 'valor')
-        );        
+        );
+        $bien->unidad_id = $unidad->id;
+        $bien->persona_id = $persona->id;
+        $bien->estatus_bien_id = 1;
+        $bien->user_id = $request->user()->id;        
+        $bien->save();
 
-
-        return dd($request);
+        return dd($persona);
     }
 
     /**

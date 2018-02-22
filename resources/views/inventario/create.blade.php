@@ -96,7 +96,7 @@
 	  </div>
 
 	  <div class="form-group">
-	    <label for="color" class="control-label col-md-2">Color:</label>
+	    <label for="color" class="control-label col-md-1">Color:</label>
 	    <div class="col-md-3">
 	    	<input type="text" name="color" class="form-control" id="color">
 	    </div>
@@ -107,6 +107,13 @@
 	    <div class="col-md-3">
 	    	<input type="text" name="serial" class="form-control" id="serial">
 	  </div>
+
+	  <div class="form-group">
+	    <label for="serial" class="control-label col-md-1">Codigo bien:</label>
+	    <div class="col-md-3">
+	    	<input type="text" name="cod_bien" class="form-control" id="serial">
+	  </div>
+
 
 	  </div>
 	  	  <div class="form-group">
