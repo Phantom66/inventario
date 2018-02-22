@@ -131,6 +131,8 @@ class BienNacionalController extends Controller
     public function update(BienNacionalRequest $request, BienNacional $bienNacional)
     {
         //
+
+        
     }
 
     /**
@@ -145,7 +147,7 @@ class BienNacionalController extends Controller
 
         $bienNacional = BienNacional::find($bien);
 
-       $bienNacional->delete();
+        $bienNacional->delete();
 
         return back()->with('info', 'Este item fue desincorporado.');
 
