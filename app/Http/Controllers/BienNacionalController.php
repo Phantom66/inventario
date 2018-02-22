@@ -90,7 +90,7 @@ class BienNacionalController extends Controller
         $bien->user_id = $request->user()->id;        
         $bien->save();
 
-        return redirect()->route('inventario_path');//verificar esta ruta
+        return "BienNacional registrado satisfactoriamente";//verificar esta ruta
     }
 
     /**
