@@ -9,6 +9,14 @@
 			      <th scope="col">Unidad Inventariada</th>
 			    	 <td>{{$bienNacional->bienUnidad->n_unidad}}</td>
 			    </tr>
+			     <tr>
+			      <th scope="col">Codigo de Ubicacion Administrativa</th>
+			    	 <td>{{$bienNacional->bienUnidad->cod_ubi_admin}}</td>
+			    </tr>
+			     <tr>
+			      <th scope="col">Ubicaccion Geografica</th>
+			    	 <td>{{$bienNacional->bienUnidad->ubi_geo}}</td>
+			    </tr>
 			    <tr>
 			    	<th scope="col">Especificaiones del Equipo</th>
 			    	<td>
@@ -37,12 +45,7 @@
 			        	{{$bienNacional->bienUser->name}} 
 			     </td>
 			    </tr>
-			    <tr>
-			    	<th scope="col">Unidad de donde</th>
-			        <td>
-			        	{{$bienNacional->bienUser->name}} 
-			     </td>
-			    </tr>
+
 		<table class="table">
 	</div>
 
