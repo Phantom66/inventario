@@ -14,7 +14,7 @@
 				  <thead class="thead-light">
 				    <tr>
 				      <th scope="col">#</th>
-				      <th scope="col">Unidad Inventariada</th>
+				      <th scope="col">Nombre del Equipo</th>
 				      <th scope="col">Especificaiones del Equipo</th>
 				      <th scope="col">Fecha de Adquisición</th>
 				      <th></th><th></th><th></th>
@@ -27,7 +27,7 @@
 				      		{{$articulo->id}}
 				      	</a>
 				      </th>
-				      <td>{{$articulo->nombre}}</td>
+				      <td>{{$articulo->n_bien}}</td>
 				      <td>
 				      	Marca: {{$articulo->marca}}<br>
 				      	Modelo:{{$articulo->modelo}}<br> 
