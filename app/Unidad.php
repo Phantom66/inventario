@@ -12,6 +12,6 @@ class Unidad extends Model
 
     protected $fillable = [
 
-    	'nom_unidad', 'cod_ubi_admin', 'ubi_geo'
+    	'n_unidad', 'cod_ubi_admin', 'ubi_geo'
     ];
 }

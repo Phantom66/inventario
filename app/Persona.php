@@ -12,7 +12,7 @@ class Persona extends Model
 
 
     protected $fillable = [
-    	'nombre','apellido','fec_egreso'
+    	'n_persona','apellido','fec_egreso'
     ];
 
     public function bienPersona()

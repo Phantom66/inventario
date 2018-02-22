@@ -11,7 +11,7 @@ class BienNacional extends Model
     protected $table = 'bien_nacionals';
 
      protected $fillable = [
-       'cod_bien','nombre', 'marca','modelo','color','serial',
+       'cod_bien','n_bien', 'marca','modelo','color','serial',
        'fec_adquisicion', 'valor'
     ];
 
