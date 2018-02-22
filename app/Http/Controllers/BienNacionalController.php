@@ -108,9 +108,15 @@ class BienNacionalController extends Controller
      * @param  \App\BienNacional  $bienNacional
      * @return \Illuminate\Http\Response
      */
-    public function edit(BienNacional $bienNacional)
+    public function edit($bien)
     {
         //
+        $bien = BienNacional::find($bien);
+
+        $status = Estatus::all();
+
+
+        return view('inventario.edit')->with(['bienNacional'=>$bien])->with(['estatus' => $status]);
     }
 
     /**

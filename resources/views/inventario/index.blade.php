@@ -39,7 +39,7 @@
 				    	<a href="{{ route('inventario_path', $articulo->id)}} >" class="btn btn-primary">&nbsp&nbspVer&nbsp&nbsp&nbsp&nbsp&nbsp</a>
 				      </td>
 				       <td>
-				    	<a href="#" class="btn btn-primary" >Actualizar</a>
+				    	<a href="{{ route('inventario_edit_path', $articulo->id)}}" class="btn btn-primary" >Editar</a>
 				      </td>
 				      <td>
 				      	<form action="{{ route('inventario_delete_path', $articulo->id) }}" method="POST">
