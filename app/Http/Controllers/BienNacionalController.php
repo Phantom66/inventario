@@ -37,7 +37,9 @@ class BienNacionalController extends Controller
     {
         //
 
-        return view('inventario.create');
+        $estatus = Estatus::all();
+
+        return view('inventario.create', compact('estatus'));
     }
 
     /**
@@ -72,12 +74,6 @@ class BienNacionalController extends Controller
 
         $unidad->save();
 
-        $estatus->fill(
-
-            $request->only('descripcion')
-        );
-
-        //$estatus->save();
 
         $bien->fill(
 
@@ -86,7 +82,7 @@ class BienNacionalController extends Controller
         );
         $bien->unidad_id = $unidad->id;
         $bien->persona_id = $persona->id;
-        $bien->estatus_bien_id = 1;
+        $bien->estatus_bien_id = $request->get('estatus_id');
         $bien->user_id = $request->user()->id;        
         $bien->save();
 

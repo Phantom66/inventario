@@ -68,8 +68,8 @@
 	  </div>
 
 	  <div class="form-group">
-	    <label for="nombre_equipo" class="control-label col-md-2">Nombre del Equipo:</label>
-	    <div class="col-md-3">
+	    <label for="nombre_equipo" class="control-label col-md-1">Nombre: </label>
+	    <div class="col-md-2">
 	    	<input type="text" name="n_bien" class="form-control" id="nombre_equipo">
 	    </div>
 	  </div>
@@ -88,6 +88,17 @@
 	    </div>
 	  </div>
 
+	   	<div class="form-group">
+		    <label for="descripcion" class="col-md-1">Estatus</label>
+		   		<div class="col-md-2">
+		    	<select class="form-control" name="estatus_id" id="descripcion">
+				 	<option> Elige una opcion</option>
+		 	 		@foreach($estatus as $estado)
+				      <option value="{{ $estado->id}}">{{ $estado->descripcion}}</option>
+				   @endforeach
+		    	</div>
+	   		</select>
+	  </div>
 	  <div class="form-group">
 	  	<hr>
 	  	<div class="form-control-static">
