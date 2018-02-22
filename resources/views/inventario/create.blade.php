@@ -2,6 +2,7 @@
 
 @section('content')
 
+	@include('frament._errors')
 	<form class="" action="{{route('inventario_store_path') }}" method="POST">
 
 		 {{ csrf_field() }}

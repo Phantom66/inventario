@@ -8,7 +8,7 @@ use App\Unidad;
 use App\Estatus;
 
 
-use Illuminate\Http\Request;
+use App\Http\Requests\BienNacionalRequest;
 
 
 
@@ -48,7 +48,7 @@ class BienNacionalController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(BienNacionalRequest $request)
     {
         //
         
@@ -116,7 +116,9 @@ class BienNacionalController extends Controller
         $status = Estatus::all();
 
 
-        return view('inventario.edit')->with(['bienNacional'=>$bien])->with(['estatus' => $status]);
+        return view('inventario.edit')
+        ->with(['bienNacional'=>$bien])
+        ->with(['estatus' => $status]);
     }
 
     /**
@@ -126,7 +128,7 @@ class BienNacionalController extends Controller
      * @param  \App\BienNacional  $bienNacional
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, BienNacional $bienNacional)
+    public function update(BienNacionalRequest $request, BienNacional $bienNacional)
     {
         //
     }

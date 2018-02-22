@@ -97,7 +97,14 @@
 		   		<div class="col-md-2">
 			    	<select class="form-control" name="estatus_id" id="descripcion">
 						@foreach($estatus as $estado)
-					      <option value="{{ $estado->id}}" selected="{{ $bienNacional->estatus_id}}">{{ $estado->descripcion}}</option>
+
+						@if($estado->id == $bienNacional->estatus_bien_id){
+						<option value="{{ $estado->id}}" selected>{{ $estado->descripcion}}</option>
+						}@else{
+							<option value="{{ $estado->id}}">{{ $estado->descripcion}}</option>
+						}@endif
+
+
 					   @endforeach
 				   	</select>
 		    	</div>
@@ -105,7 +112,7 @@
 	  <div class="form-group">
 	  	<hr>
 	  	<div class="form-control-static">
-			<br>		
+			<br>		{{ $bienNacional->estatus_bien_id}}
 	  	</div>
 	  </div>
 
