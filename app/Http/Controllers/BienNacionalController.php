@@ -3,6 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\BienNacional;
+use App\Persona;
+use App\Unidad;
+use App\Estatus;
+
 
 use Illuminate\Http\Request;
 
@@ -45,28 +49,38 @@ class BienNacionalController extends Controller
     public function store(Request $request)
     {
         //
-        $bien = new BienNacional();
+        
+        $persona = new Persona;
+        $unidad = new Unidad;
+        $estatus = new Estatus;
+        $bien = new BienNacional;
 
-        $bien->bienPersona->nombre = $request->get('nombre');
-        $bien->bienPersona->apellido = $request->get('apellido');
-        $bien->bienPersona->fec_egreso = $request->get('fec_egreso');
 
-        $bien->bienUnidad->nom_unidad = $request->get('nom_unidad');
-        $bien->bienUnidad->cod_ubi_admin = $request->get('cod_ubi_admin');
-        $bien->bienUnidad->ubi_geo = $request->get('ubi_geo');
+        $persona->fill(
 
-        $bien->bienEstatus->descripcion = $request->get('descripcion');
+            $request->only('nombre', 'apellido', 'fec_egreso')
 
-        $bien->cod_bien = $request->get('cod_bien');
-        $bien->nombre = $request->get('nombre');
-        $bien->marca = $request->get('marca');
-        $bien->modelo = $request->get('modelo');
-        $bien->color = $request->get('color');
-        $bien->serial = $request->get('serial');
-        $bien->fec_adquisicion = $request->get('fec_adquisicion');
-        $bien->valor = $request->get('valor');
+        );
 
-        return dd($bien);
+        $unidad->fill(
+
+            $request->only('nom_unidad', 'cod_ubi_admin', 'ubi_geo')
+
+        );
+
+        $estatus->fill(
+
+            $request->only('descripcion')
+        );
+
+        $bien->fill(
+
+            $request->only('cod_bien', 'nombre', 'marca', 'modelo', 'color', 
+                           'serial', 'fec_adquisicion', 'valor')
+        );        
+
+
+        return dd($request);
     }
 
     /**

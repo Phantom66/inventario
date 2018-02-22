@@ -13,14 +13,14 @@
 	  <div class="form-group">
 	    <label for="nombre" class="control-label col-md-1">Nombres: </label>
 	    <div class="col-md-3">  
-	    	<input type="nombre" class="form-control" id="nombre">	
+	    	<input type="nombre" name="nombre" class="form-control" id="nombre">	
 	    </div>
 	   </div>
 
 	  <div class="form-group">
 	    <label for="apellido" class="control-label col-md-1">Apellidos:</label>
 	    <div class="col-md-3">
-	    	<input type="text" class="form-control" id="apellido">
+	    	<input type="text" name="apellido" class="form-control" id="apellido">
 	    </div>
 
 	  </div>
@@ -28,7 +28,7 @@
 	  <div class="form-group">
 	    <label for="fec_egreso" class="control-label col-md-1">Fecha de Ingreso:</label>
 	    <div class="col-md-3">
-	    	<input type="date" class="form-control" id="fec_egreso">
+	    	<input type="date" name="fec_egreso" class="form-control" id="fec_egreso">
 	    </div>
 	  </div>
 
@@ -42,21 +42,21 @@
 	  <div class="form-group">
 	    <label for="nombre_unidad" class="control-label col-md-1">Unidad:</label>
 	    <div class="col-md-3">
-	    	 <input type="text" class="form-control" id="nombre_unidad">
+	    	 <input type="text" name="nom_unidad" class="form-control" id="nombre_unidad">
 	    </div>
 	  </div>
 
 	  <div class="form-group">
 	    <label for="cod_ubi_admin" class="control-label col-md-1">Cod.Ubi.Admin.:</label>
 	    <div class="col-md-3">
-	    	<input type="text" class="form-control" id="cod_ubi_admin">
+	    	<input type="text" name="cod_ubi_admin" class="form-control" id="cod_ubi_admin">
 	    </div>
 	  </div>
 
 	  <div class="form-group">
 	    <label for="ubi_geo" class="control-label col-md-1">Ubicación Geográfica:</label>
 	    <div class="col-md-3">
-	    	<input type="text" class="form-control" id="ubi_geo">
+	    	<input type="text" name="ubi_geo" class="form-control" id="ubi_geo">
 	    </div>
 	  </div>
 
@@ -70,21 +70,21 @@
 	  <div class="form-group">
 	    <label for="nombre_equipo" class="control-label col-md-2">Nombre del Equipo:</label>
 	    <div class="col-md-3">
-	    	<input type="text" class="form-control" id="nombre_equipo">
+	    	<input type="text" name="nombre_equipo" class="form-control" id="nombre_equipo">
 	    </div>
 	  </div>
 
 	  <div class="form-group">
 	    <label for="marca" class="control-label col-md-1">Marca:</label>
 	    <div class="col-md-2">
-	    	<input type="text" class="form-control" id="marca">
+	    	<input type="text" name="marca" class="form-control" id="marca">
 	    </div>
 	  </div>
 
 	  <div class="form-group">
 	    <label for="Modelo" class="control-label col-md-1">Modelo:</label>
 	    <div class="col-md-2">
-	    	<input type="text" class="form-control" id="Modelo">
+	    	<input type="text" name="modelo" class="form-control" id="Modelo">
 	    </div>
 	  </div>
 
@@ -98,14 +98,14 @@
 	  <div class="form-group">
 	    <label for="color" class="control-label col-md-2">Color:</label>
 	    <div class="col-md-3">
-	    	<input type="text" class="form-control" id="color">
+	    	<input type="text" name="color" class="form-control" id="color">
 	    </div>
 	  </div>
 
 	  <div class="form-group">
 	    <label for="serial" class="control-label col-md-1">Serial:</label>
 	    <div class="col-md-3">
-	    	<input type="text" class="form-control" id="serial">
+	    	<input type="text" name="serial" class="form-control" id="serial">
 	  </div>
 
 	  </div>
@@ -119,7 +119,7 @@
 	  <div class="form-group">
 	    <label for="fec_adquisicion" class="control-label col-md-2">Fecha de Adquisición:</label>
 	    <div class="col-md-3">
-	    	<input type="date" class="form-control" id="fec_adquisicion">
+	    	<input type="date" name="fec_adquisicion" class="form-control" id="fec_adquisicion">
 	    </div>
 	    
 	  </div>
@@ -127,7 +127,7 @@
 	  <div class="form-group">
 	    <label for="valor" class="control-label col-md-1">Valor:</label>
 	    <div class="col-md-3">
-	    	<input type="text" class="form-control" id="valor">
+	    	<input type="text" name="valor" class="form-control" id="valor">
 	    </div>  
 	  </div>
 
