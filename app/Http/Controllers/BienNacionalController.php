@@ -47,7 +47,26 @@ class BienNacionalController extends Controller
         //
         $bien = new BienNacional();
 
-        return dd($request);
+        $bien->bienPersona->nombre = $request->get('nombre');
+        $bien->bienPersona->apellido = $request->get('apellido');
+        $bien->bienPersona->fec_egreso = $request->get('fec_egreso');
+
+        $bien->bienUnidad->nom_unidad = $request->get('nom_unidad');
+        $bien->bienUnidad->cod_ubi_admin = $request->get('cod_ubi_admin');
+        $bien->bienUnidad->ubi_geo = $request->get('ubi_geo');
+
+        $bien->bienEstatus->descripcion = $request->get('descripcion');
+
+        $bien->cod_bien = $request->get('cod_bien');
+        $bien->nombre = $request->get('nombre');
+        $bien->marca = $request->get('marca');
+        $bien->modelo = $request->get('modelo');
+        $bien->color = $request->get('color');
+        $bien->serial = $request->get('serial');
+        $bien->fec_adquisicion = $request->get('fec_adquisicion');
+        $bien->valor = $request->get('valor');
+
+        return dd($bien);
     }
 
     /**

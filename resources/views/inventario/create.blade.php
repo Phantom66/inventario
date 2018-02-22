@@ -63,7 +63,7 @@
 	  <div class="form-group">
 	  	<hr>
 	  	<div class="form-control-static">
-			<br><p><b>Específicaicones del Equipo</b></p>	  		
+			<br><p><b>Específicaciones del Equipo</b></p>	  		
 	  	</div>
 	  </div>
 
