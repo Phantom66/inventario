@@ -4,7 +4,7 @@
 
 @include('frament._errors')
 
-<form class="" action="#" method="POST">
+<form class="" action="{{route('inventario_update_path'), $bienNacional->id}}" method="PUT">
 
 		 {{ csrf_field() }}
 

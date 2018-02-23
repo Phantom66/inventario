@@ -54,7 +54,6 @@ class BienNacionalController extends Controller
         
         $persona = new Persona;
         $unidad = new Unidad;
-        $estatus = new Estatus;
         $bien = new BienNacional;
 
 
@@ -111,13 +110,13 @@ class BienNacionalController extends Controller
     public function edit($bien)
     {
         //
-        $bien = BienNacional::find($bien);
+        $bienNacional = BienNacional::find($bien);
 
         $status = Estatus::all();
 
 
         return view('inventario.edit')
-        ->with(['bienNacional'=>$bien])
+        ->with(['bienNacional'=>$bienNacional])
         ->with(['estatus' => $status]);
     }
 
@@ -134,7 +133,6 @@ class BienNacionalController extends Controller
 
         $persona = new Persona;
         $unidad = new Unidad;
-        $estatus = new Estatus;
         $bien = new BienNacional;
 
 
@@ -156,7 +154,7 @@ class BienNacionalController extends Controller
                            'serial', 'fec_adquisicion', 'valor')
         );
 
-        $bienNacional->estatus_bien_id = $request->get('estatus_id');
+        //$bienNacional->estatus_bien_id = $request->get('estatus_id');
 
         return " USUARIO ACTUALIZADO";
         
