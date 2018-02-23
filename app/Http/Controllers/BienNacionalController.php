@@ -23,7 +23,7 @@ class BienNacionalController extends Controller
     {
         //
 
-       $bienes = BienNacional::orderBy('id','DESC')->paginate(10);
+       $bienes = BienNacional::orderBy('id','DESC')->paginate(5);
 
         return view('inventario.index', compact('bienes'));
     }

@@ -30,7 +30,7 @@ class BienNacionalRequest extends FormRequest
         'n_bien' => 'required', 
         'serial' => 'required',
         'fec_adquisicion' => 'required',
-        'descripcion'=>'required',
+        'estatus_id'=>'required',
         'n_persona' => 'required',
         'apellido' =>'required',
         'fec_egreso' => 'required',  

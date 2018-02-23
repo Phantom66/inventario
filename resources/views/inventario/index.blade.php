@@ -8,7 +8,7 @@
 	<div class="form-group">
 
 		<div class="form-control-static">
-			<h2>Listado</h2>  <a href="{{ route('inventario_create_path')}}" class="btn btn-default pull-right">Crear</a>	
+		<a href="{{ route('inventario_create_path')}}" class="btn btn-default pull-right">Crear</a>	
 	  	</div>
 	  </div>	
 	  	@include('frament._info')
@@ -52,9 +52,13 @@
 			@endforeach
   				</tbody>
 		</table>
+
+		<div class="col-sm-8">
+			{!! $bienes->render() !!}
+		</div>
 	</div>
 
-		{!! $bienes->render() !!}
+
 	<div class="col-sm-4" >
 		<hr>
 		@include('frament._aside')
