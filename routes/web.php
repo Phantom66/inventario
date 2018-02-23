@@ -26,6 +26,8 @@ Route::group(['middleware' => 'auth'],function(){
 		Route::delete('inventario/{bien}', 'BienNacionalController@destroy')
 		     ->name('inventario_delete_path');
 
+		Route::get('descargar', 'BienNacionalController@pdf')->name('inventario_pdf_path');
+
 });
 
 

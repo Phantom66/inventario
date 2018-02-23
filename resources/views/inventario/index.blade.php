@@ -6,12 +6,12 @@
 		<hr>
 
 	<div class="form-group">
-
+		@include('frament._info')
 		<div class="form-control-static">
 		<a href="{{ route('inventario_create_path')}}" class="btn btn-default pull-right">Crear</a>	
 	  	</div>
 	  </div>	
-	  	@include('frament._info')
+
 				<table class="table table-hover table-striped">
 				  <thead class="thead-light">
 				    <tr>

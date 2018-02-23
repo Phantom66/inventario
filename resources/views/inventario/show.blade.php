@@ -46,6 +46,8 @@
 			     </td>
 			    </tr>
 
+			    <a href="{{route('inventario_pdf_path', $bienNacional->id)}}">Dscargar</a>
+
 		<table class="table">
 	</div>
 

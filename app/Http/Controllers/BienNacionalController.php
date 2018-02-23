@@ -98,7 +98,21 @@ class BienNacionalController extends Controller
     {
         //
 
-         return view('inventario.show')->with('bienNacional', $bien);
+       
+         //Se está realizando de esta manera para capturara el pdf
+         return  view('inventario.show')->with('bienNacional', $bien);
+
+
+    }
+
+    public function pdf(BienNacional $bien){
+
+
+        
+        $pdf = PDF::loadView('inventario.show');
+
+        return $pdf->download('listado.pdf');
+
     }
 
     /**
