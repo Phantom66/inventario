@@ -132,6 +132,33 @@ class BienNacionalController extends Controller
     {
         //
 
+        $persona = new Persona;
+        $unidad = new Unidad;
+        $estatus = new Estatus;
+        $bien = new BienNacional;
+
+
+        $persona->update(
+
+            $request->only('n_persona', 'apellido', 'fec_egreso')
+
+        );
+
+        $unidad->update(
+
+            $request->only('n_unidad', 'cod_ubi_admin', 'ubi_geo')
+
+        );
+
+        $bien->update(
+
+            $request->only('cod_bien', 'n_bien', 'marca', 'modelo', 'color', 
+                           'serial', 'fec_adquisicion', 'valor')
+        );
+
+        $bienNacional->estatus_bien_id = $request->get('estatus_id');
+
+        return " USUARIO ACTUALIZADO";
         
     }
 
