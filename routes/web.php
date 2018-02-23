@@ -20,7 +20,7 @@ Route::group(['middleware' => 'auth'],function(){
 		     ->name('inventario_edit_path');
 
 		Route::get('inventario/{bien}', 'BienNacionalController@show')
-		     ->name('inventario_path');
+		     ->name('inventario_show_path');
 
 
 		Route::delete('inventario/{bien}', 'BienNacionalController@destroy')

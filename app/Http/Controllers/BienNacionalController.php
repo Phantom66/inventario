@@ -85,7 +85,7 @@ class BienNacionalController extends Controller
         $bien->user_id = $request->user()->id;        
         $bien->save();
 
-        return "BienNacional registrado satisfactoriamente";//verificar esta ruta
+        return redirect()->route('inventario_path')->with('info', "Los datos se registraron correctamente.");
     }
 
     /**
@@ -127,20 +127,17 @@ class BienNacionalController extends Controller
      * @param  \App\BienNacional  $bienNacional
      * @return \Illuminate\Http\Response
      */
-    public function update(BienNacionalRequest $request, BienNacional $bienNacional)
+    public function update(BienNacionalRequest $request, $bien)
     {
-        //
 
-        $persona = new Persona;
-        $unidad = new Unidad;
-        $bien = new BienNacional;
-
+        $persona = Persona::find($bien);
 
         $persona->update(
 
-            $request->only('n_persona', 'apellido', 'fec_egreso')
-
+                $request->only('n_persona', 'apellido', 'fec_egreso')
         );
+
+        $unidad = Unidad::find($bien);
 
         $unidad->update(
 
@@ -148,15 +145,19 @@ class BienNacionalController extends Controller
 
         );
 
-        $bien->update(
+        $bienNacional= BienNacional::find($bien);
+
+        $bienNacional->update(
 
             $request->only('cod_bien', 'n_bien', 'marca', 'modelo', 'color', 
                            'serial', 'fec_adquisicion', 'valor')
         );
 
-        //$bienNacional->estatus_bien_id = $request->get('estatus_id');
+        $bienNacional->estatus_bien_id = $request->get('estatus_id');
+        $bienNacional->save();
 
-        return " USUARIO ACTUALIZADO";
+
+        return redirect()->route('inventario_path')->with('info', "Los datos se actualizaron correctamente.");
         
     }
 

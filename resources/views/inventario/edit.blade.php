@@ -4,8 +4,9 @@
 
 @include('frament._errors')
 
-<form class="" action="{{route('inventario_update_path'), $bienNacional->id}}" method="PUT">
+<form class="" action="{{route('inventario_update_path', $bienNacional->bienPersona->id )}}" method="POST">
 
+		{{  method_field('PUT') }}
 		 {{ csrf_field() }}
 
 	
@@ -112,7 +113,7 @@
 	  <div class="form-group">
 	  	<hr>
 	  	<div class="form-control-static">
-			<br>		{{ $bienNacional->estatus_bien_id}}
+			<br>		
 	  	</div>
 	  </div>
 

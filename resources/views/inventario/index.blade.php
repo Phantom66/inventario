@@ -36,7 +36,7 @@
 				      	Serial: {{$articulo->serial}}</td>
 				      <td>{{$articulo->fec_adquisicion}}</td>
 				      <td>
-				    	<a href="{{ route('inventario_path', $articulo->id)}} >" class="btn btn-primary">&nbsp&nbspVer&nbsp&nbsp&nbsp&nbsp&nbsp</a>
+				    	<a href="{{ route('inventario_show_path', $articulo->id)}} >" class="btn btn-primary">&nbsp&nbspVer&nbsp&nbsp&nbsp&nbsp&nbsp</a>
 				      </td>
 				       <td>
 				    	<a href="{{ route('inventario_edit_path', $articulo->id)}}" class="btn btn-primary" >Editar</a>
