@@ -105,7 +105,7 @@ class BienNacionalController extends Controller
 
     }
 
-    public function pdf(BienNacional $bien){
+   /* public function pdf(BienNacional $bien){
 
 
         
@@ -114,7 +114,7 @@ class BienNacionalController extends Controller
         return $pdf->download('listado.pdf');
 
     }
-
+*/
     /**
      * Show the form for editing the specified resource.
      *
@@ -141,8 +141,18 @@ class BienNacionalController extends Controller
      * @param  \App\BienNacional  $bienNacional
      * @return \Illuminate\Http\Response
      */
-    public function update(BienNacionalRequest $request, $bien)
+    public function update(BienNacionalRequest $request,  $bien)
     {
+
+
+        $bienNacional = BienNacional::find($bien);
+
+        $bienNacional->update(
+
+            $request->only('cod_bien', 'n_bien', 'marca', 'modelo', 'color', 
+                           'serial', 'fec_adquisicion', 'valor')
+        );
+
 
         $persona = Persona::find($bien);
 
@@ -159,13 +169,7 @@ class BienNacionalController extends Controller
 
         );
 
-        $bienNacional= BienNacional::find($bien);
 
-        $bienNacional->update(
-
-            $request->only('cod_bien', 'n_bien', 'marca', 'modelo', 'color', 
-                           'serial', 'fec_adquisicion', 'valor')
-        );
 
         $bienNacional->estatus_bien_id = $request->get('estatus_id');
         $bienNacional->save();
