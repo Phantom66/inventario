@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.template')
 
 @section('content')
 	
@@ -7,9 +7,6 @@
 
 	<div class="form-group">
 		@include('frament._info')
-		<div class="form-control-static">
-		<a href="{{ route('inventario_create_path')}}" class="btn btn-default pull-right">Crear</a>	
-	  	</div>
 	  </div>	
 
 				<table class="table table-hover table-striped">
@@ -45,7 +42,7 @@
 				      	<form action="{{ route('inventario_delete_path', $articulo->id) }}" method="POST">
 				      	{{ csrf_field() }}
 				      		<input type="hidden" name="_method" value="DELETE">
-				      		<button class="btn btn-link">Desincorporar</button>
+				      		<button class="btn btn-primary">Desincorporar</button>
 				      	</form>
 				      </td>
 				    </tr>
@@ -57,13 +54,5 @@
 			{!! $bienes->render() !!}
 		</div>
 	</div>
-
-
-	<div class="col-sm-4" >
-		<hr>
-		@include('frament._aside')
-	</div>
-
-	
 
 @endsection()

@@ -26,7 +26,7 @@ Route::group(['middleware' => 'auth'],function(){
 		Route::delete('inventario/{bien}', 'BienNacionalController@destroy')
 		     ->name('inventario_delete_path');
 
-		Route::get('descargar', 'BienNacionalController@pdf')->name('inventario_pdf_path');
+		 Route::get('inventario/{bien}/pdf', 'BienNacionalController@pdf')->name('inventario_pdf_path');
 
 });
 
@@ -34,5 +34,6 @@ Route::group(['middleware' => 'auth'],function(){
 
 Auth::routes();
 
+Route::get('inventario/{bien}/pdf', 'BienNacionalController@pdf')->name('inventario_pdf_path');
 //Route::get('/home', 'HomeController@index')->name('home');
 

@@ -105,16 +105,15 @@ class BienNacionalController extends Controller
 
     }
 
-   /* public function pdf(BienNacional $bien){
+   public function pdf(BienNacional $bien){
 
+             
+        $pdf = \PDF::loadView('inventario.vista', ['bienNacional' => $bien]);
 
-        
-        $pdf = PDF::loadView('inventario.show');
-
-        return $pdf->download('listado.pdf');
+        return $pdf->download('Listado.pdf');
 
     }
-*/
+
     /**
      * Show the form for editing the specified resource.
      *

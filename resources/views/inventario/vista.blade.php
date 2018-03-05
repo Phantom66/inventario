@@ -1,6 +1,5 @@
-@extends('layouts.app')
-
-@section('content')
+	
+	<h1>Reportes</h1>
 
 
 	<div class="col-sm-8">
@@ -44,16 +43,8 @@
 			        <td>
 			        	{{$bienNacional->bienUser->name}} 
 			     </td>
-
-			     <td>
-			     	<a href="{{route('inventario_pdf_path', $bienNacional->id)}}" class="btn btn-primary">Descargar</a>
-			     </td>
 			    </tr>
 
-			  
 		<table class="table">
 	</div>
-
-@endsection()
-
 
