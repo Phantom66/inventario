@@ -8,10 +8,6 @@
       <!-- CSRF Token -->
    <meta name="csrf-token" content="{{ csrf_token() }}">
    <title>{{ config('app.name', 'Laravel') }}</title>
-
-    <!-- Styles  <link href="{{ asset('css/app.css') }}" rel="stylesheet">-->                       
- 
-
   <!-- Bootstrap core CSS-->
   <link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <!-- Custom fonts for this template-->
