@@ -2,13 +2,14 @@
 
 @section('content')
 	
-	<div class="col-sm-8">
-		<hr>
-
-	<div class="form-group">
-		@include('frament._info')
+	<div class="col-sm-12">
+		<div class="form-group">
+			@include('frament._info')
+			<h1>Equipos</h1>
+	        @include('frament._aside')
+     	 </div>
 	  </div>	
-
+		<hr>
 				<table class="table table-hover table-striped">
 				  <thead class="thead-light">
 				    <tr>
@@ -49,7 +50,6 @@
 			@endforeach
   				</tbody>
 		</table>
-
 		<div class="col-sm-8">
 			{!! $bienes->render() !!}
 		</div>

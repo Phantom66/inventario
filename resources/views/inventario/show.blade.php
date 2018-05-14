@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.template')
 
 @section('content')
 
@@ -53,7 +53,7 @@
 			  
 		<table class="table">
 	</div>
-
+	<br><br><br>
 @endsection()
 
 
