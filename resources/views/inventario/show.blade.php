@@ -1,9 +1,7 @@
 @extends('layouts.template')
 
 @section('content')
-
-
-	<div class="col-sm-8">
+	<div class="col-md-8">
 		<table class="table">
 			    <tr>
 			      <th scope="col">Unidad Inventariada</th>
@@ -49,10 +47,8 @@
 			     	<a href="{{route('inventario_pdf_path', $bienNacional->id)}}" class="btn btn-primary">Descargar</a>
 			     </td>
 			    </tr>
-
-			  
-		<table class="table">
-	</div>
+			</table>
+		</div>
 	<br><br><br>
 @endsection()
 
