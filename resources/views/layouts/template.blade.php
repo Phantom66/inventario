@@ -81,14 +81,11 @@
     </div>
   </nav>
   <div class="content-wrapper">
-    <div class="container-fluid">
-       <div class="col-sm-12" >
-
-
+    <div class="container">
        @yield('content')
 
     </div>
-
+  </div>
     <!-- /.container-fluid-->
     <!-- /.content-wrapper-->
     <footer class="sticky-footer">
