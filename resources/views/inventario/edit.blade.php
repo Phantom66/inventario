@@ -2,16 +2,16 @@
 
 @section('content')
 
-@include('frament._errors')
+	@include('frament._errors')
 
-<form class="" action="{{route('inventario_update_path', $bienNacional->bienPersona->id )}}" method="POST">
+	<form class="" action="{{route('inventario_update_path', $bienNacional->bienPersona->id )}}" method="POST">
 		{{  method_field('PUT') }}
 		 {{ csrf_field() }}
-	<div class="form-group">
+		<div class="form-group">
 		  	<div class="form-control-static">
 				<strong>Datos de la Persona que Entrega</strong>	  		
 	  		</div>
-	  </div>
+		  </div>
 	  <div class="form-group">
 	    <label for="nombre" class="control-label col-md-1">Nombres: </label>
 	    <div class="col-md-3">  
