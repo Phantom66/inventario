@@ -42,6 +42,11 @@ class BienNacionalController extends Controller
         return view('inventario.create', compact('estatus'));
     }
 
+    public function vistaPrevia(){
+
+        return view('inventario.vista');
+    }
+
     /**
      * Store a newly created resource in storage.
      *

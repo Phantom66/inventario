@@ -17,7 +17,9 @@
   <!-- Custom styles for this template-->
   <link href="/assetslte/css/sb-admin.css" rel="stylesheet">
 </head>
-
+<header>
+  <img  src="/img/header2.img">
+</header>
 <body class="fixed-nav sticky-footer bg-dark" id="page-top">
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
     <a class="navbar-brand" href="{{ url('/') }}">{{ config('app.name', 'Laravel') }}</a>
@@ -39,7 +41,7 @@
               <a href="#">Editar</a>
             </li>
             <li>
-              <a href="#">Desincorporar</a>
+              <a href="#">Desincorporar Probando</a>
             </li>
             <li>
               <a class="sidenav-second-level collapse" data-toggle="collapse" href="#collapseMulti2">Ver</a>

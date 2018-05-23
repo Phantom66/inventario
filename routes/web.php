@@ -33,7 +33,7 @@ Route::group(['middleware' => 'auth'],function(){
 
 
 Auth::routes();
-
+Route::get('inventario/new/vista', 'BienNacionalController@vistaPrevia');
 Route::get('inventario/{bien}/pdf', 'BienNacionalController@pdf')->name('inventario_pdf_path');
 //Route::get('/home', 'HomeController@index')->name('home');
 
