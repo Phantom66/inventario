@@ -4,62 +4,52 @@
 	<title>PDF</title>
 </head>
 	<body>
-		
-		
-				<h3 align="center">
-				Repúblic Bolivaria de Venezuela <br>
-				Universidad Nacional Experimental Simón Rodríguez <br>(UNESR) <br>
-				Dirección de Serguridad Universitaria <br>División de Operaciones<br>
-				Control de Ruta de Materiales y Equipos Universitarios
-				</h3>
-		
-		
+		<h4 align="center">
+			Repúblic Bolivaria de Venezuela <br>
+			Universidad Nacional Experimental Simón Rodríguez <br>(UNESR) <br>
+			Dirección de Serguridad Universitaria <br>División de Operaciones<br>
+			Control de Ruta de Materiales y Equipos Universitarios
+		</h4>
 		<p align="center">
-			Salida e Ingreso
+			<b>EQUIPO INVENTARIADO
 		</p>
 		<hr>
-		<table>
+		<br><br><br>
+		<table border="1" align="center">
 			<tbody>
 				<tr>
-					<td>
-
-					</td>
-					</tr>
-					<tr>
-						<td >&nbsp;<strong>Unidad Inventariada</strong></td>
-						<td >&nbsp;<strong>Codigo de Ubicacion Administrativa</strong></td>
-						<td >&nbsp;<strong>Ubicaccion Geografica</strong></td>
-					</tr>
-					<tr>
-						<td >&nbsp;Datos</td>
-						<td >&nbsp;Datos</td>
-						<td >&nbsp;Datos</td>
-					</tr>
-					<tr>
-						<td>&nbsp;<strong>Especificaiones del Equipo</strong></td>
-						<td>&nbsp;<strong>Estado del Equipo</strong></td>
-						<td>&nbsp;<strong>Fecha de Adquisición</strong></td>
-					</tr>
-					<tr>
-						<td>&nbsp;			      	
-							Marca: Datos<br>
-				      		 Modelo: Datos<br> 
-				      		 Serial: Datos</td>
-						<td>&nbsp;Datos</td>
-						<td>&nbsp;Datos</td>
-					</tr>
-					<tr>
-						<td>&nbsp;<strong>Persona Responsable de la Entrega</strong></td>
-						<td>&nbsp;<strong>Persona Responsable Quien Recibe</strong></td>
-					</tr>
-					<tr>
-						<td>&nbsp;Datos</td>
-						<td>&nbsp;Datos </td>	
-					</tr>
+					<th>&nbsp;<strong>Unidad Inventariada</strong></th>
+					<th>&nbsp;<strong>Codigo de Ubicacion Administrativa</strong></th>
+					<th>&nbsp;<strong>Ubicaccion Geografica</strong></th>
+				</tr>
+				<tr>
+					<td>&nbsp;{{$bienNacional->bienUnidad->n_unidad}}</td>
+					<td>&nbsp;{{$bienNacional->bienUnidad->cod_ubi_admin}}</td>
+					<td>&nbsp;{{$bienNacional->bienUnidad->ubi_geo}}</td>
+				</tr>
+				<tr>
+					<th>&nbsp;<strong>Especificaiones del Equipo</strong></th>
+					<th>&nbsp;<strong>Estado del Equipo</strong></th>
+					<th>&nbsp;<strong>Fecha de Adquisición</strong></th>
+				</tr>
+				<tr>
+					<td>&nbsp;Marca: {{$bienNacional->marca}}<br>
+						&nbsp;Modelo: {{$bienNacional->modelo}}<br> 
+				  		&nbsp;Serial: {{$bienNacional->serial}}</td>
+					<td>&nbsp;{{$bienNacional->bienEstatus->descripcion}}</td>
+					<td>&nbsp;{{$bienNacional->fec_adquisicion}}</td>
+				</tr>
+				<tr>
+					<th>&nbsp;<strong>Responsable de la Entrega</strong></th>
+					<th>&nbsp;<strong>Responsable Quien Recibe</strong></th>
+				</tr>
+				<tr>
+					<td>&nbsp;{{$bienNacional->bienPersona->n_persona}} {{$bienNacional->bienPersona->apellido}}</td>
+					<td>&nbsp;{{$bienNacional->bienUser->name}} </td>	
+				</tr>
 				</tbody>
 			</table>
+			<br><br><br>
 			<hr> 
-		</div>
-	</div>
 	</body>
 </html>
