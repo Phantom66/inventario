@@ -35,13 +35,13 @@
           </a>
           <ul class="sidenav-second-level collapse" id="collapseMulti">
             <li>
+              <a href="{{ route('inventario_path')}}">Inicio</a>
+            </li>
+            <li>
               <a href="{{ route('inventario_create_path')}}">Crear</a>
             </li>
             <li>
-              <a href="#">Editar</a>
-            </li>
-            <li>
-              <a href="#">Desincorporar Probando</a>
+              <a href="{{ route('inventario_desincorporar')}}">Desincorporar</a>
             </li>
             <li>
               <a class="sidenav-second-level collapse" data-toggle="collapse" href="#collapseMulti2">Ver</a>

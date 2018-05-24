@@ -183,6 +183,13 @@ class BienNacionalController extends Controller
         
     }
 
+    public function desincorporar(){
+
+       $bienes = BienNacional::orderBy('id','DESC')->paginate(5);
+       return view('inventario.desincorporar', compact('bienes'));
+
+        //return 'Hola mundo';
+    }
     /**
      * Remove the specified resource from storage.
      *

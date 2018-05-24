@@ -17,7 +17,7 @@
 				      <th scope="col">Nombre del Equipo</th>
 				      <th scope="col">Especificaiones del Equipo</th>
 				      <th scope="col">Fecha de Adquisición</th>
-				      <th></th><th></th><th></th>
+				      <th></th>
 				    </tr>
 				  </thead>
 				  @foreach($bienes as $articulo)
@@ -33,12 +33,6 @@
 				      	Modelo:{{$articulo->modelo}}<br> 
 				      	Serial: {{$articulo->serial}}</td>
 				      <td>{{$articulo->fec_adquisicion}}</td>
-				      <td>
-				    	<a href="{{ route('inventario_show_path', $articulo->id) }} >" class="btn btn-primary">&nbsp&nbspVer&nbsp&nbsp&nbsp&nbsp&nbsp</a>
-				      </td>
-				       <td>
-				    	<a href="{{ route('inventario_edit_path', $articulo->id) }}" class="btn btn-primary" >Editar</a>
-				      </td>
 				      <td>
 				      	<form action="{{ route('inventario_delete_path', $articulo->id) }}" method="POST">
 				      	{{ csrf_field() }}
